@@ -1,99 +1,100 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
+  font-family: "Fira Sans", sans-serif;
+  box-sizing: border-box;
   margin: 0;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  background-color: #c4c4c4;
+  padding: 4px 0;
+}
+
+.score-board {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 76px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.points {
+  font-size: 3.75rem;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.score-board p {
+  font-size: 1.25rem;
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+  margin-top: 50px;
+}
+
+.user-choice:hover {
+  cursor: pointer;
+}
+
+.title-select {
+  text-align: center;
+  height: 120px;
+}
+
+.title-user {
+  font-size: 35px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #000;
+  margin-top: 16px;
+  height: 80vh;
+}
+
+.pick {
+  align-self: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.hiden {
+  display: none;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.selected {
+  width: 80px;
 }
 
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.pick div p {
+  margin-top: 30px;
+  font-size: 24px;
 }
 
-.card {
-  padding: 2em;
+.show {
+  display: block;
 }
 
-.read-the-docs {
-  color: #888;
+.center-result {
+  align-self: center;
+  font-size: 30px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #fff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+.non-clickable {
+  pointer-events: none;
 }
